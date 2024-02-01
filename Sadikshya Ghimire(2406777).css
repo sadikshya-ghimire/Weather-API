@@ -1,0 +1,154 @@
+/* Apply the following styles to all elements */
+* {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Styles for the entire body of the page */
+body {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* Background image */
+    background: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    position: static;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Responsive background size adjustment for larger screens */
+@media only screen and (min-width: 768px) {
+    body {
+        background-size: auto;
+    }
+}
+
+/* Styling for the main card/container */
+.card {
+    background: #eaeaea52;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    margin: 1em;
+    color: rgb(8, 7, 7);
+}
+
+/* Styling for the search button */
+button {
+    border-radius: 50%;
+    margin: 0.5em;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 57px;
+    background: #7c7c7c2b;
+    color: grey;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+/* Hover effect for the search button */
+button:hover {
+    background: #7c7c7c6b;
+}
+
+/* Styling for the search bar container */
+.search {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+/* Styling for the search input field */
+input.searchbar {
+    border: none;
+    outline: none;
+    padding: 0.9em;
+    border-radius: 18px;
+    background: #7c7c7c2b;
+    font-size: 120%;
+    width: 100%;
+}
+
+/* Styling for the temperature heading */
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+
+/* Styling for the flex container */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+/* Margin adjustment for the weather condition */
+.condition {
+    margin-left: -1%;
+}
+
+/* Styling the line spacing */
+.space{
+    line-height: 1.5;
+}
+table {
+    border-spacing: 30px;
+    background-color: rgba(26, 23, 23, 0.159);
+    margin-left: 60%;
+  }
+#draggableElement {
+    cursor: grab;
+}
+#hiddenContent {
+    height: 0;
+    width: 500px;
+    overflow: hidden;
+    background-color: #100f0f2c;
+    padding: 20px;
+    transition: height 0.5s ease;
+    position: absolute;
+    bottom: 20%;
+    left: 37%;
+    text-align: center;
+    margin-top: 0%;
+}
+.link {
+    padding: 15px 32px;
+    margin: 2px 4px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    position: fixed; /* Change to fixed so it stays in place */
+    bottom: 100px; /* Adjust the distance from the bottom */
+    right: 45%; /* Adjust the distance from the right */
+    color: aliceblue;
+    z-index: 1; /* Set a higher z-index to ensure it's above other elements */
+}
+/* Styling Footer section */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--card-bg);
+    right: 43%;
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: var(--card-backdrop);
+    color: rgba(8, 9, 9, 0.646);
+    padding: 10px; /* Add padding for better appearance */
+}
+
+.error{
+    display: none;
+}
+
+/* Sadikshya Ghimire (2406777) */

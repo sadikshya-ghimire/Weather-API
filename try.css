@@ -1,0 +1,98 @@
+body {
+    justify-content: center;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /* Background image */
+    background: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    margin: 0;
+
+}
+
+.seven-days-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.day {
+    background-color: #e90dab2c;
+    color: #ddd;
+    border: 1px solid #eb6dca2b;
+    padding: 40px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10%;
+    transition: background 0.5s, transform 0.5s;
+}
+.day:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(-5px);
+}
+
+.day-info {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.date-info {
+    font-size: 0.9em;
+    color: #f1e9e9;
+}
+
+.temperature {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.wind-speed,
+.humidity {
+    margin-bottom: 5px;
+    color: #f0ebeb;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: var(--card-bg);
+    width: 100%;
+    text-align: center;
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: var(--card-backdrop);
+    color: rgba(8, 9, 9, 0.646);
+}
+a.btn {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    color: antiquewhite;
+    position: absolute;
+    font-size: 25px;
+    margin-top: 700px;
+}
+/* Style the icon */
+.icons {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffcc00; 
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: var(--card-bg);
+    width: 100%;
+    text-align: center;
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    backdrop-filter: var(--card-backdrop);
+    color: rgba(8, 9, 9, 0.646);
+}

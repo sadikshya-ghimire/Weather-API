@@ -1,0 +1,188 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag to Show/Hide</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars during drag */
+        }
+
+        #draggableContainer {
+            cursor: grab;
+            user-select: none; /* Disable text selection during drag */
+        }
+
+        #hiddenContent {
+            height: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            padding: 20px;
+            transition: height 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="draggableContainer">
+        Drag me to Show/Hide
+        <div id="hiddenContent" class="hidden">Hidden Content</div>
+    </div>
+
+    <script>
+        const draggableContainer = document.getElementById('draggableContainer');
+        const hiddenContent = document.getElementById('hiddenContent');
+        let isDragging = false;
+
+        draggableContainer.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            document.body.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                const mouseY = e.clientY;
+                const containerRect = draggableContainer.getBoundingClientRect();
+
+                // Calculate the height based on the mouse position relative to the container
+                const height = Math.max(0, mouseY - containerRect.top);
+                hiddenContent.style.height = `${height}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            document.body.style.cursor = 'grab';
+        });
+
+        // Optional: Reset height on double-click
+        draggableContainer.addEventListener('dblclick', () => {
+            hiddenContent.style.height = '0';
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Week Weather Data</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temperature (°C)</th>
+                <th>Condition</th>
+            </tr>
+        </thead>
+        <tbody id="weatherTableBody"></tbody>
+    </table>
+
+    <script>
+        // Placeholder data for demonstration
+        const pastWeekWeatherData = [
+            { date: '2024-01-17', temperature: 25, condition: 'Clear' },
+            { date: '2024-01-18', temperature: 22, condition: 'Cloudy' },
+            { date: '2024-01-19', temperature: 18, condition: 'Rainy' },
+            // ... Add more data for the past week
+        ];
+
+        const weatherTableBody = document.getElementById('weatherTableBody');
+
+        // Function to create a table row for weather data
+        function createWeatherTableRow(data) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${data.date}</td>
+                <td>${data.temperature}</td>
+                <td>${data.condition}</td>
+            `;
+            return row;
+        }
+
+        // Populate the weather table with past week data
+        pastWeekWeatherData.forEach((weatherData) => {
+            const row = createWeatherTableRow(weatherData);
+            weatherTableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Sadikshya Ghimire(2406777).css">
+    <title>Weather App</title>
+</head>
+<body>
+    <!-- Main container for the weather app -->
+    <div class="card">
+        <!-- Search bar section -->
+        <div class="search">
+            <!-- Input field for the city name -->
+            <input type="text" class="searchbar" placeholder="Enter City Name" spellcheck="false" id="cityInput">
+            <!-- Search button image source and path -->
+            <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.023,16.977c-0.513-0.488-1.004-0.997-1.367-1.384c-0.372-0.378-0.596-0.653-0.596-0.653l-2.8-1.337 C15.34,12.37,16,10.763,16,9c0-3.859-3.14-7-7-7S2,5.141,2,9s3.14,7,7,7c1.763,0,3.37-0.66,4.603-1.739l1.337,2.8 c0,0,0.275,0.224,0.653,0.596c0.387,0.363,0.896,0.854,1.384,1.367c0.494,0.506,0.988,1.012,1.358,1.392 c0.362,0.388,0.604,0.646,0.604,0.646l2.121-2.121c0,0-0.258-0.242-0.646-0.604C20.035,17.965,19.529,17.471,19.023,16.977z M9,14 c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S11.757,14,9,14z"></path></svg></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+        <!-- Weather information section -->
+        <div class="weather">
+            <h2 class="city">Saharsa</h2>
+            <h1 class="temp">22°c</h1>
+            <div class="flex"><img src="" alt="" class="icon">
+                <div class="condition">Cloudy</div>
+            </div>
+            <div class="space">
+            <div class="time">Jan 1, 2024</div>
+            <div class="humidity">Humidity: 90%</div>
+            <div class="wind">Wind Speed: 20km/h</div>
+            <div class="pressure">Pressure: 20</div>
+        </div>
+        </div>
+    </div>
+<footer ><b> <p>&copy;2024 Sadikshya Ghimire 2406777</p></b></footer>
+<!-- Linking Java Scirpt file here to acess the data       -->
+<script src="Sadikshya Ghimire(2406777).js"></script> 
+</body>
+</html>
